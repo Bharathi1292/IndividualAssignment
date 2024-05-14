@@ -33,9 +33,7 @@ jobs:
      
       - name: install pytest
         run: pip install pytest
-     
-      - name: unittest
-        run: pytest test.py
+    
         
       - name: Run unit tests
         run: |

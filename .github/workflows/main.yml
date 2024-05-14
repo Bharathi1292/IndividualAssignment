@@ -38,8 +38,7 @@ jobs:
         run: pytest test.py
 
       - name: Run unit tests
-        run: |
-             python -m pytest test2.py 
+        run: pytest test2.py 
 
       - name: Copy to dist
         run: |

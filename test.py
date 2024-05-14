@@ -21,12 +21,12 @@ def read_json(data):
 
 # Test to verify CSV file contains 12 columns
 def test_csv_columns():
-    data = read_csv('profiles1.csv')
+    data = read_csv('profiles.csv')
     assert len(data[0]) == 12
 
 # Test to verify CSV file contains 900+ rows
 def test_csv_rows():
-    data = read_csv('profiles1.csv')
+    data = read_csv('profiles.csv')
     assert len(data) >= 900
 
 # Test to verify JSON file contains all required properties

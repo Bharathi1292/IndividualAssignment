@@ -39,7 +39,13 @@ jobs:
 
       - name: Run unit tests
         run: |
+             mkdir -p test_results
+             python -m pytest --junitxml=test_results/results.xml
+
+      - name: Run unit tests
+        run: |
                python -m pytest Test2.py
+               
 
       - name: Upload test results
         if: always()

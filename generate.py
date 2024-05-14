@@ -111,9 +111,6 @@ def getCallingCode(currentCountry):
         return correct.replace("+","")
     return correct
 
-
-# f = fake.first_name(), 'no_NO', 'fi_FI','dk_DK'])
-
 antal = 0
 
 with open('profiles.csv', 'w', newline='',encoding='utf-8') as file:

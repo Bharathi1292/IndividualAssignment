@@ -29,3 +29,6 @@ def test_json_rows():
     data = read_json('data.json')
     # Replace the below assertion with the correct one based on your JSON structure
     assert len(data) >= 900
+
+def test_always_passes():
+    assert True

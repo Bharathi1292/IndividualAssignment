@@ -13,11 +13,11 @@ def read_json(file):
     return data
 
 def test_csv_columns():
-    data = read_csv('profiles.csv')
+    data = read_csv('profiles1.csv')
     assert len(data[0]) == 12
 
 def test_csv_rows():
-    data = read_csv('profiles.csv')
+    data = read_csv('profiles1.csv')
     assert len(data) >= 900
 
 def test_json_properties():

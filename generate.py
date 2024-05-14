@@ -113,7 +113,7 @@ def getCallingCode(currentCountry):
 
 antal = 0
 
-with open('profiles.csv', 'w', newline='',encoding='utf-8') as file:
+with open('profiles1.csv', 'w', newline='',encoding='utf-8') as file:
     writer = csv.writer(file)
     field = ["Givenname", "Surname", "Streetaddress", "City", "Zipcode","Country", "CountryCode","NationalId","TelephoneCountryCode","Telephone","Birthday", "ConsentToContact"]
     writer.writerow(field)

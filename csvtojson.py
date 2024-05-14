@@ -15,5 +15,5 @@ def csv_to_json(csv_file, json_file):
         json.dump(data, json_file, ensure_ascii=False, indent=4)
 
 # Example usage
-csv_to_json('profiles1.csv', 'data.json')
+csv_to_json('profiles.csv', 'data.json')
 

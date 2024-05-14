@@ -46,7 +46,6 @@ jobs:
           name: test-results-1
           path: test_results
 
-      # Run your second set of tests
       - name: Run unittests
         run: |
           mkdir -p test_results

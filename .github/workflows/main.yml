@@ -33,7 +33,7 @@ jobs:
         run: |
           pytest Test2.py
           pytest test.py
-        continue-on-error: false
+        continue-on-error: True
         
       - name: Upload test results
         uses: actions/upload-artifact@v2

@@ -22,13 +22,12 @@ def test_csv_rows():
 
 def test_json_properties():
     data = read_json('data.json')
-  
-    assert len(data) >= 900  
+    assert len(data[0]) == 10  # Intentional failure
 
 def test_json_rows():
     data = read_json('data.json')
-   
     assert len(data) >= 900
 
 def test_always_passes():
     assert True
+

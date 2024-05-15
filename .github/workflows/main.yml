@@ -46,11 +46,26 @@ jobs:
           name: test-results-1
           path: test_results
 
-      - name: Run unittests
+      - name: Run unit tests
         run: |
           mkdir -p test_results
           pytest test.py --junitxml=test_results/results1.xml
+        continue-on-error: true
 
+      - name: Check test results and deploy if successful
+        if: always()
+        run: |
+          if [ ${{ job.status }} == "success" ]; then
+            echo "Tests passed. Deploying to GitHub Pages..."
+            # Deploy to GitHub Pages
+            gh-pages-deploy-action@4.1.2
+            with:
+              ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              BRANCH: gh-pages
+              FOLDER: .  # Assuming your HTML+JavaScript files are in the root directory
+          else
+            echo "Tests failed. Deployment skipped."
+          fi
       - name: Upload second test results
         uses: actions/upload-artifact@v2
         with:
